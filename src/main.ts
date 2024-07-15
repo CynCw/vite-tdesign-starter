@@ -9,12 +9,10 @@ import 'tdesign-mobile-vue/es/style/index.css'
 
 import router from '~/router'
 
-import axios from '~/axios'
-
 createApp(App).use(router).use(createRouterScroller({
   selectors: {
     'window': true,
     'body': true,
     '.scrollable': true,
   },
-})).use(axios).use(createPinia()).mount('#app')
+})).use(createPinia()).mount('#app')
