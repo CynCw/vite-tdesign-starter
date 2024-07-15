@@ -21,9 +21,15 @@ export default defineConfig({
         imports: ['RouteRecordRaw'],
         type: true,
       }, {
+        '@vueuse/core': ['useLocalStorage'],
+        'axios': [
+          // default imports
+          ['default', 'axios'],
+        ],
+      }, {
         from: 'vue-router',
         imports: ['createRouter', 'createWebHistory'],
-      }],
+      }, 'pinia'],
       resolvers: [TDesignResolver({
         library: 'mobile-vue',
       })],
